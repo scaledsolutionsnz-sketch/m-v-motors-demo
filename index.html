@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M V Motors | Balclutha | Automotive Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:#1a1a1a;background:#fff;}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(10,20,40,0.97);backdrop-filter:blur(10px);padding:0;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 1.2rem;}
+.nav-logo{font-size:1.3rem;font-weight:900;color:#fff;text-decoration:none;padding:1.1rem 0;letter-spacing:-0.02em;}
+.nav-logo span{color:#3b82f6;}
+.nav-cta{background:#3b82f6;color:#fff;padding:0.55rem 1.3rem;border-radius:6px;font-weight:700;font-size:0.85rem;text-decoration:none;margin:0.75rem 0;}
+.hero{min-height:100vh;background:linear-gradient(rgba(5,12,25,0.75),rgba(5,12,25,0.75)),url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;padding-top:72px;}
+.hero-content{max-width:700px;margin:0 auto;padding:4rem 1.5rem;text-align:center;}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.2rem;}
+.hero h1 span{color:#3b82f6;}
+.hero p{font-size:1.1rem;color:rgba(255,255,255,0.78);margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.btn-primary{background:#3b82f6;color:#fff;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;margin-right:0.75rem;}
+.btn-outline{background:transparent;color:#fff;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-block;border:1.5px solid rgba(255,255,255,0.3);}
+.section{padding:5rem 1.5rem;}
+.section-title{text-align:center;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:0.75rem;}
+.section-sub{text-align:center;color:#666;font-size:1rem;margin-bottom:3rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto;}
+.service-card{background:#f0f4ff;border-radius:12px;padding:1.8rem;border-top:3px solid #3b82f6;}
+.service-icon{font-size:2rem;margin-bottom:0.75rem;}
+.service-card h3{font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;}
+.service-card p{color:#555;font-size:0.88rem;line-height:1.6;}
+.about{background:#0a1428;padding:5rem 1.5rem;}
+.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.about img{width:100%;border-radius:12px;height:380px;object-fit:cover;}
+.about h2{color:#fff;font-size:clamp(1.8rem,3vw,2.3rem);font-weight:900;letter-spacing:-0.02em;margin-bottom:1rem;}
+.about h2 span{color:#3b82f6;}
+.about p{color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:1rem;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;}
+.stat{background:rgba(59,130,246,0.1);border-radius:8px;padding:1rem;border:1px solid rgba(59,130,246,0.2);}
+.stat-num{font-size:1.8rem;font-weight:900;color:#3b82f6;}
+.stat-label{font-size:0.8rem;color:rgba(255,255,255,0.55);}
+.reviews{background:#f0f4ff;padding:5rem 1.5rem;}
+.stars{color:#f59e0b;font-size:1.4rem;}
+.rating-big{font-size:3rem;font-weight:900;}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:1000px;margin:2.5rem auto 0;}
+.review-card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.review-card .stars{font-size:1rem;margin-bottom:0.5rem;}
+.review-card p{color:#444;font-size:0.9rem;line-height:1.6;font-style:italic;margin-bottom:0.75rem;}
+.reviewer{font-weight:700;font-size:0.85rem;}
+.contact{padding:5rem 1.5rem;}
+.contact-inner{max-width:680px;margin:0 auto;}
+.form-group{margin-bottom:1.2rem;}
+.form-group label{display:block;font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.85rem 1rem;border:1.5px solid #d1d5db;border-radius:8px;font-size:0.95rem;font-family:inherit;}
+.form-group textarea{height:130px;resize:vertical;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.btn-submit{width:100%;background:#3b82f6;color:#fff;border:none;padding:1rem;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;}
+footer{background:#0a1428;color:rgba(255,255,255,0.55);padding:3rem 1.5rem;text-align:center;}
+.footer-logo{font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:1rem;}
+.footer-logo span{color:#3b82f6;}
+footer p{font-size:0.85rem;margin-bottom:0.3rem;}
+.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);font-size:0.78rem;}
+@media(max-width:768px){.about-inner{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.btn-primary,.btn-outline{display:block;margin:0 auto 0.7rem;max-width:220px;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">MV <span>Motors</span></a>
+    <a href="#contact" class="nav-cta">Book a Service</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Balclutha's <span>Trusted</span> Auto Specialists</h1>
+    <p>WOF inspections, servicing, repairs, and vehicle sales. Reliable automotive care from a team that knows the South.</p>
+    <a href="#contact" class="btn-primary">Book Now</a>
+    <a href="#services" class="btn-outline">Our Services</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2 class="section-title">What We Do</h2>
+  <p class="section-sub">Full-service automotive care in Balclutha — everything you need to keep your vehicle safe and running well.</p>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-icon">✅</div><h3>WOF Inspections</h3><p>Fast, thorough Warrant of Fitness checks with same-day availability in most cases.</p></div>
+    <div class="service-card"><div class="service-icon">🔧</div><h3>Servicing & Maintenance</h3><p>Full vehicle service, oil changes, filter replacements, and scheduled maintenance.</p></div>
+    <div class="service-card"><div class="service-icon">🔩</div><h3>Mechanical Repairs</h3><p>Engine, transmission, suspension, brakes — all repairs handled by our experienced team.</p></div>
+    <div class="service-card"><div class="service-icon">🚗</div><h3>Vehicle Sales</h3><p>Quality second-hand vehicles available. Reliable cars at honest prices.</p></div>
+    <div class="service-card"><div class="service-icon">🛞</div><h3>Tyres & Wheels</h3><p>Supply, fitting, balancing, and alignment. All major tyre brands available.</p></div>
+    <div class="service-card"><div class="service-icon">💻</div><h3>Diagnostics</h3><p>Modern diagnostic equipment to identify problems quickly and accurately.</p></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-inner">
+    <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=800&q=80" alt="Workshop">
+    <div>
+      <h2>Serving <span>Balclutha</span> & the Clutha District</h2>
+      <p>M V Motors has been looking after vehicles in Balclutha and the wider Clutha district for years. We're a local business — we know our customers by name and we stand behind every job we do.</p>
+      <p>Whether you need a quick WOF, a full service, or a more complex repair, our team has the experience and the equipment to get it done right.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-num">WOF</div><div class="stat-label">Same-day available</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Local & trusted</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div style="text-align:center;">
+    <div class="rating-big">4.9</div>
+    <div class="stars">★★★★★</div>
+    <p style="color:#666;font-size:0.9rem;margin-top:0.3rem;">Google Reviews</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Honest, reliable, and fair pricing. Got my WOF sorted same day and they flagged a small issue before it became a big one. Really appreciated that."</p><div class="reviewer">— Craig B., Balclutha</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Best mechanics in town. They've serviced both our vehicles for years. Always upfront about what's needed and what can wait. Wouldn't go anywhere else."</p><div class="reviewer">— Janette M.</div></div>
+    <div class="review-card"><div class="stars">★★★★★</div><p>"Great service, friendly team. Sorted my car out quickly when I was passing through. Reasonably priced and very professional."</p><div class="reviewer">— Dean R.</div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <h2 class="section-title">Book a Service</h2>
+    <p class="section-sub">Fill out the form and we'll get back to you to confirm a time that works.</p>
+    <form action="https://api.staticforms.xyz/submit" method="post">
+      <input type="hidden" name="accessKey" value="sf_768da8d33927e7f4f241d0a6">
+      <input type="hidden" name="subject" value="New booking enquiry from M V Motors website">
+      <input type="hidden" name="redirectTo" value="https://m-v-motors-demo.vercel.app/thank-you.html">
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="Your number" required></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Vehicle Make & Model</label><input type="text" name="vehicle" placeholder="e.g. Toyota Hilux 2018"></div>
+      <div class="form-group"><label>Service Required</label>
+        <select name="service"><option value="">Select a service</option><option>WOF Inspection</option><option>Full Service</option><option>Mechanical Repair</option><option>Tyres & Wheels</option><option>Diagnostics</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Additional Details</label><textarea name="message" placeholder="Any other information..."></textarea></div>
+      <button type="submit" class="btn-submit">Send Booking Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">MV <span>Motors</span></div>
+  <p>📍 Balclutha, Clutha District, Otago, New Zealand</p>
+  <p>📞 <a href="tel:034184151" style="color:rgba(255,255,255,0.55);text-decoration:none;">03 418 4151</a></p>
+  <p>✉️ <a href="mailto:mvmotors@xtra.co.nz" style="color:rgba(255,255,255,0.55);text-decoration:none;">mvmotors@xtra.co.nz</a></p>
+  <div class="footer-bottom">© 2025 M V Motors. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
